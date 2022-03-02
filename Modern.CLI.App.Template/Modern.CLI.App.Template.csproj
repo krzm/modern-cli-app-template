@@ -7,4 +7,19 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+		<PackageReference Include="CommandDotNet" Version="6.1.0-alpha.repl" />
+		<PackageReference Include="CommandDotNet.DataAnnotations" Version="2.0.3" />
+		<PackageReference Include="Unity" Version="5.11.10" />
+		<PackageReference Include="CommandDotNet.NameCasing" Version="3.0.1" />
+	</ItemGroup>
+
+  <ItemGroup>
+		<Reference Include="DIHelper">
+			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
+		</Reference>
+		<Reference Include="CommandDotNet.Helper">
+			<HintPath>..\..\..\Build\commanddotnet-helper\CommandDotNet.Helper\CommandDotNet.Helper.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 </Project>
