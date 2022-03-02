@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using DIHelper;
+using Modern.CLI.App.Template;
+using Unity;
+
+IBootstraper booter = new Bootstraper(
+    new UnityDependencySuite(
+        new UnityContainer().AddExtension(new Diagnostic())));
+booter.Boot(args);
