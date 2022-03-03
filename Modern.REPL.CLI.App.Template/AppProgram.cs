@@ -36,18 +36,4 @@ public class AppProgram
             context.ShowHelpOnExit = true;
         }
     }
-
-    protected override void RegisterCommandClasses(AppRunner appRunner)
-    {
-        var commandClassTypes = appRunner.GetCommandClassTypes();
-        var registeredExplicitly = new Type[] 
-        {
-            // typeof()
-        };
-        foreach (var type in commandClassTypes)
-        {
-            if(registeredExplicitly.Contains(type.type)) continue;
-            Container.RegisterSingleton(type.type);
-        }
-    }
 }

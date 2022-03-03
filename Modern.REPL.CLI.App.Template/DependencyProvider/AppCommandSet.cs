@@ -19,6 +19,5 @@ public class AppCommandSet
 
     private void RegisterReadCommands()
     {
-        //Container.RegisterSingleton<IReadCommand<PlaceArgFilter>, PlaceReadCommand>();
     }
 }
