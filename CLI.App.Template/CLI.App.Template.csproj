@@ -28,7 +28,7 @@
   	</ItemGroup>
 
 	<!--Debug refs-->
-	<ItemGroup>
+	<!-- <ItemGroup>
 		<Reference Include="DIHelper">
 			<HintPath>..\..\di-helper\DIHelper\bin\Debug\net6.0\DIHelper.dll</HintPath>
 		</Reference>
@@ -47,10 +47,10 @@
 		<Reference Include="Serilog.Wrapper">
 			<HintPath>..\..\serilog-wrapper\Serilog.Wrapper\bin\Debug\net6.0\Serilog.Wrapper.dll</HintPath>
 		</Reference>
-	</ItemGroup>
+	</ItemGroup> -->
 
 	<!--Release refs-->
-	<!-- <ItemGroup>
+	<ItemGroup>
 		<Reference Include="DIHelper">
 			<HintPath>..\..\..\Build\di-helper\DIHelper\DIHelper.dll</HintPath>
 		</Reference>
@@ -69,5 +69,5 @@
 		<Reference Include="Serilog.Wrapper">
 			<HintPath>..\..\..\Build\serilog-wrapper\Serilog.Wrapper\Serilog.Wrapper.dll</HintPath>
 		</Reference>
-	</ItemGroup> -->
+	</ItemGroup>
 </Project>
