@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Modern.CLI.App.Template/Modern.CLI.App.Template.csproj",
+                "${workspaceFolder}/CLI.App.Template/CLI.App.Template.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Modern.CLI.App.Template/Modern.CLI.App.Template.csproj",
+                "${workspaceFolder}/CLI.App.Template/CLI.App.Template.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Modern.CLI.App.Template/Modern.CLI.App.Template.csproj"
+                "${workspaceFolder}/CLI.App.Template/CLI.App.Template.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

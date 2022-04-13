@@ -1,4 +1,6 @@
-using DIHelper;
+using CommandDotNet.Unity.Helper;
+using Config.Wrapper.Unity;
+using Serilog.Wrapper.Unity;
 using Unity;
 
 namespace Modern.CLI.App.Template;
@@ -12,9 +14,15 @@ public class UnityDependencySuite
     {
     }
 
+    protected override void RegisterAppData()
+    {
+        RegisterSet<AppLoggerSet>();
+        RegisterSet<AppConfigSet>();
+    }
+    
     protected override void RegisterCommands() => 
         RegisterSet<AppCommandSet>();
 
     protected override void RegisterProgram() => 
-        Container.RegisterSingleton<IAppProgram, AppProgram>();
+        RegisterSet<AppProgSet<AppProg>>();
 }

@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Modern.CLI.App.Template/bin/Debug/net6.0/Modern.CLI.App.Template.dll",
+            "program": "${workspaceFolder}/CLI.App.Template/bin/Debug/net6.0/CLI.App.Template.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/Modern.CLI.App.Template",
+            "cwd": "${workspaceFolder}/CLI.App.Template",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "integratedTerminal",
             "stopAtEntry": false

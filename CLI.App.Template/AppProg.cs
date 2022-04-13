@@ -1,21 +1,23 @@
 using CommandDotNet;
-using CommandDotNet.Helper;
 using CommandDotNet.Repl;
-using Unity;
+using CommandDotNet.Unity.Helper;
+using Config.Wrapper;
+using Serilog;
 
 namespace Modern.CLI.App.Template;
 
-public class AppProgram 
-    : AppProgramUnity<AppProgram>
+public class AppProg 
+    : AppProgUnity<AppProg>
 {
 	private static bool inSession;
 
     [Subcommand]
     public AppCommands? AppCommands { get; set; }
 
-    public AppProgram(
-        IUnityContainer container) 
-            : base(container)
+    public AppProg(
+        ILogger log
+        , IConfigReader config) 
+            : base(log, config)
     {
     }
 
