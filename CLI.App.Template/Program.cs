@@ -1,8 +1,4 @@
-﻿using DIHelper;
-using Modern.CLI.App.Template;
-using Unity;
+﻿using Modern.CLI.App.Template;
 
-IBootstraper booter = new Bootstraper(
-    new UnityDependencySuite(
-        new UnityContainer().AddExtension(new Diagnostic())));
-booter.Boot(args);
+var app = new ModernCliApp();
+app.Run(args);
