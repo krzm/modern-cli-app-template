@@ -4,7 +4,7 @@ using Unity;
 
 namespace Modern.CLI.App.Template;
 
-public class ModernCliApp
+public class CliApp
 {
     private IDependencySuite? suite;
 
@@ -16,7 +16,7 @@ public class ModernCliApp
             .AddExtension(new Diagnostic());
         var serviceSuite = new ServiceSuite(unity);
         serviceSuite.Register();
-        suite = new AppSuiteConfig(
+        suite = new SuiteConfig(
             unity.Resolve<IConfigReader>())
                 .GetSuite(unity);
         IBootstraper booter = new Bootstraper(suite);

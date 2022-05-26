@@ -5,13 +5,13 @@ using Serilog;
 
 namespace Modern.CLI.App.Template;
 
-public class AppProg 
-    : AppProgUnity<AppProg>
+public class CommandCli 
+    : AppProgUnity<CommandCli>
 {
     [Subcommand]
     public AppCommands? AppCommands { get; set; }
 
-    public AppProg(
+    public CommandCli(
         ILogger log
         , IConfigReader config) 
             : base(log, config)

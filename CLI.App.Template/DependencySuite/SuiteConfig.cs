@@ -5,11 +5,11 @@ using Unity;
 
 namespace Modern.CLI.App.Template;
 
-public class AppSuiteConfig
+public class SuiteConfig
 {
     private readonly IConfigReader configReader;
 
-    public AppSuiteConfig(
+    public SuiteConfig(
         IConfigReader configReader
     )
     {
@@ -21,8 +21,8 @@ public class AppSuiteConfig
         var settings = configReader.GetConfigSection<CommandDotNetSettings>(nameof(CommandDotNetSettings));
         ArgumentNullException.ThrowIfNull(settings);
         if(settings.UseRepl)
-            return new CliReplAppSuite(unity);
+            return new ReplCliSuite(unity);
         else
-            return new CliAppSuite(unity);
+            return new CommandCliSuite(unity);
     }
 }

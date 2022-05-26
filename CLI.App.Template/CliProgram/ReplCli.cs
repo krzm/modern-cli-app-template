@@ -6,15 +6,15 @@ using Serilog;
 
 namespace Modern.CLI.App.Template;
 
-public class ReplAppProg 
-    : AppProgUnity<ReplAppProg>
+public class ReplCli 
+    : AppProgUnity<ReplCli>
 {
 	private static bool inSession;
 
     [Subcommand]
     public AppCommands? AppCommands { get; set; }
 
-    public ReplAppProg(
+    public ReplCli(
         ILogger log
         , IConfigReader config) 
             : base(log, config)

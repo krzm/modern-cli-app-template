@@ -6,10 +6,10 @@ using Unity;
 
 namespace Modern.CLI.App.Template;
 
-public class CliAppSuite 
+public class CommandCliSuite 
     : UnityDependencySuite
 {
-    public CliAppSuite(
+    public CommandCliSuite(
         IUnityContainer container) 
         : base(container) 
     {
@@ -19,5 +19,5 @@ public class CliAppSuite
         RegisterSet<AppCommandSet>();
 
     protected override void RegisterProgram() =>
-        RegisterSet<AppProgSet<AppProg>>();
+        RegisterSet<AppProgSet<CommandCli>>();
 }

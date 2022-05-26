@@ -4,10 +4,10 @@ using Unity;
 
 namespace Modern.CLI.App.Template;
 
-public class CliReplAppSuite 
+public class ReplCliSuite 
     : UnityDependencySuite
 {
-    public CliReplAppSuite(
+    public ReplCliSuite(
         IUnityContainer container) 
         : base(container) 
     {
@@ -17,5 +17,5 @@ public class CliReplAppSuite
         RegisterSet<AppCommandSet>();
 
     protected override void RegisterProgram() =>
-        RegisterSet<AppProgSet<ReplAppProg>>();
+        RegisterSet<AppProgSet<ReplCli>>();
 }
