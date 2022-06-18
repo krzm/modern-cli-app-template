@@ -1,4 +1,15 @@
-﻿using Modern.CLI.App.Template;
+﻿using Config.Wrapper;
+using DIHelper;
+using Modern.CLI.App.Template;
+using Unity;
 
-var app = new CliApp();
-app.Run(args);
+var unity = new UnityContainer()
+    .AddExtension(new Diagnostic());
+var serviceSuite = new ServiceSuite(unity);
+serviceSuite.Register();
+var suite = new SuiteConfig(
+    unity.Resolve<IConfigReader>())
+        .GetSuite(unity);
+IBootstraper booter = new Bootstraper(suite);
+booter.CreateApp();
+booter.RunApp(args);
